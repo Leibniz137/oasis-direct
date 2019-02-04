@@ -1,7 +1,21 @@
+# Notes:
+```
+# modifications to fix install:
 
+# to fix this timeout:
+# $ git ls-remote --tags --heads git://github.com/frozeman/WebSocket-Node.git
+# fatal: unable to connect to github.com:
+# github.com[0: 192.30.253.112]: errno=Operation timed out
+# github.com[1: 192.30.253.113]: errno=Operation timed out
+git config url."https://".insteadOf git://
+
+# to fix this error:
+
+yarn config set ignore-engines true
+```
 # Oasis Direct  
 Oasis.Direct is a convenient and user friendly fully-decentralized way to change tokens, especially DAI/ETH and DAI/ERC-20 token pairs.   
-  
+
 You don’t need to think about wrapping/unwrapping ETH (and other non ERC-20 compliant tokens), you don’t need to worry about the current liquidity on the exchange and you are always guaranteed the best price you can get from Oasis.DEX exchange.
 
 ## Deployments
