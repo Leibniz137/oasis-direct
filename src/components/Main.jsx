@@ -10,21 +10,13 @@ const Main = props => (
       <main className="Container">
         <div>
           <div className="MainHeading">
-            <h1>Oasis.Direct is shutting down.</h1>
+            <h1>THE FIRST DECENTRALIZED INSTANT MARKETPLACE</h1>
           </div>
           <div className="SecondaryHeading">
-            <h2>
-              For more information, check out:
-              <a style={{
-                textDecoration:'none',
-                color:'white'
-              }}
-                 href="https://medium.com/makerdao/a-new-oasis-5b9539a64adf">
-                &nbsp;A New Oasis
-              </a>
-            </h2>
+            <h2>No Registration. No Fees.</h2>
           </div>
         </div>
+        {props.widget}
       </main>
     </section>
   </LandingPage>
