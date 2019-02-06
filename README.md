@@ -1,4 +1,37 @@
-# Notes:
+# How to host content on IPFS:
+This DEX frontend needs you!
+
+This web3page content isn't accesible without other people (that means you!) altruistically hosting it on ipfs.
+
+
+Help DAI grow by using an old computer
+
+#### Step 1: Download v1.6 content from github
+```
+# -L to follow redirects
+curl -L -o build.tgz https://github.com/Leibniz137/oasis-direct/releases/download/v1.6.0/build.tgz
+tar xvfz build.tgz
+```
+
+### Step 2: Install & Configure IPFS
+```
+# prerequisite: install ipfs with a package manager like brew or apt-get
+
+# in another terminal window
+# your ipfs daemon needs to be running for your computer to service requests for the DEX frontend
+# ie you need a server for this.
+
+ipfs init
+ipfs daemon
+```
+
+### Step 3: Add Content to IPFS
+```
+ipfs add --recursive build
+```
+
+
+# Developer Notes:
 ```
 # modifications to fix install:
 
@@ -10,9 +43,13 @@
 git config url."https://".insteadOf git://
 
 # to fix this error:
+TODO what was the error?
 
 yarn config set ignore-engines true
 ```
+
+(original Oasis Direct README begins here)
+
 # Oasis Direct  
 Oasis.Direct is a convenient and user friendly fully-decentralized way to change tokens, especially DAI/ETH and DAI/ERC-20 token pairs.   
 
